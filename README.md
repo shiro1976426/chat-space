@@ -22,16 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## usersテーブル
+## userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false|
+|username|string|null: false|
 |user_group|integer|null: false|
 ### Association
 - belongs_to :user_group
 - has_many :comments
+- has_many :group, through: :user_group
 
 ## user_groupテーブル
 |Column|Type|Options|
@@ -39,23 +40,25 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :users
-- has_many :group
+- belongs_to :user
+- belongs_to :group
 
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group|text||
+|group|string||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user-group
-- has_many :comment
+- belongs_to :comment
+- has_many :user, through: :user_group
 
 ## commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text|
+|image|image|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
