@@ -30,9 +30,9 @@ Things you may want to cover:
 |username|string|null: false|
 |user_group|integer|null: false|
 ### Association
-- has_many :user_group
+- has_many :users_groups
 - has_many :comments
-- has_many :group, through: :user_group
+- has_many :groups, through: :users_groups
 
 ## user_groupテーブル
 |Column|Type|Options|
@@ -50,9 +50,9 @@ Things you may want to cover:
 |group|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :user-group
-- has_many :comment
-- has_many :user, through: :user_group
+- has_many :users-groups
+- has_many :comments
+- has_many :users, through: :users_groups
 
 ## commentテーブル
 |Column|Type|Options|
