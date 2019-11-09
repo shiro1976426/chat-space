@@ -30,7 +30,7 @@ Things you may want to cover:
 |username|string|null: false|
 |user_group|integer|null: false|
 ### Association
-- belongs_to :user_group
+- has_many :user_group
 - has_many :comments
 - has_many :group, through: :user_group
 
@@ -47,22 +47,20 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group|string||
+|group|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user-group
-- belongs_to :comment
+- has_many :user-group
+- has_many :comment
 - has_many :user, through: :user_group
 
 ## commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|
+|text|text|null: false|
 |image|image|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-
