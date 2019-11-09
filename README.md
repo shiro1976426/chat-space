@@ -27,35 +27,37 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|nickname|string|null: false|
+|user_group|integer|null: false|
 ### Association
-- has_many :names
-- has_many :users_names
+- belongs_to :user_group
+- has_many :comments
 
-## namesテーブル
+## user_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many:users_names
-- has_many :posts
+- has_many :users
+- has_many :group
 
+## groupテーブル
 
-## users_namesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name_id|string|null: false|
-|user_id|string|null: false|
+|group|text||
+|user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :posts
+- belongs_to :user-group
+- has_many :comment
 
-## postsテーブル
+## commentテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|
+|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :names
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
