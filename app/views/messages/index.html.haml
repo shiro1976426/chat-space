@@ -9,13 +9,13 @@
         %p.side-header__box__user-name sasa
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
+            %a{link_to:"/groups/new"}
               %i.fa.fa-edit 
           %li.side-header__box__menu__edit-user
-            %a{:href => "/users/2233/edit"}
+            %a{link_to:"/users/2233/edit"}
               %i.fa.fa-cog
     .groups
-      %a{:href => "/groups/4925/messages"}
+      %a{link_to:"/groups/4925/messages"}
         .group
           %p.group__group-name sasasasasa
           %p.group__latest-message まだメッセージがありません
@@ -27,43 +27,41 @@
         %ul.main-header__left-box__member-list
           Member：
           %li.main-header__left-box__member-list__member sasa
-      %a{:href => "/groups/4925/edit"}
+      %a{link_to:"/groups/4925/edit"}
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => "11952"}
+      .message{"data-message_id":"11952"}
         .message__upper-info
           %p.message__upper-info__talker sasa
           %p.message__upper-info__date 2019/11/11(Mon) 20:06:04
         %p.message__text aaa
-      .message{"data-message_id" => "11952"}
+      .message{"data-message_id":"11952"}
         .message__upper-info
           %p.message__upper-info__talker sasa
           %p.message__upper-info__date 2019/11/11(Mon) 20:06:04
         %p.message__text aaa
-      .message{"data-message_id" => "11952"}
+      .message{"data-message_id":"11952"}
         .message__upper-info
           %p.message__upper-info__talker sasa
           %p.message__upper-info__date 2019/11/11(Mon) 20:06:04
         %p.message__text aaa
-      .message{"data-message_id" => "11952"}
+      .message{"data-message_id":"11952"}
         .message__upper-info
           %p.message__upper-info__talker sasa
           %p.message__upper-info__date 2019/11/11(Mon) 20:06:04
         %p.message__text aaa
-      .message{"data-message_id" => "11952"}
+      .message{"data-message_id":"11952"}
         .message__upper-info
           %p.message__upper-info__talker sasa
           %p.message__upper-info__date 2019/11/11(Mon) 20:06:04
         %p.message__text aaa
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/4925/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "Hx5cfKwzCpk1YTSP2kWzqeVgUsMcGlRM+wdxtSKBUlaBVPyXFeMxg14omkEsLNVj2QoMy/CoLVpl3bMQb9OAHw=="}/
+      %form#new_message.new_message{"accept-charset":"UTF-8",action:"/groups/4925/messages",enctype:"multipart/form-data",method:"post"}
+        %input{name:"utf8",type:"hidden",value:"✓"}/
+        %input{name:"authenticity_token",type:"hidden", value:"Hx5cfKwzCpk1YTSP2kWzqeVgUsMcGlRM+wdxtSKBUlaBVPyXFeMxg14omkEsLNVj2QoMy/CoLVpl3bMQb9OAHw=="}/
         .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
+          %input#message_content.input-box__text{name:"message[content]",placeholder:"type a message", type:"text"}/
+          %label.input-box__image{for:"message_image"}
             %i.fa.fa-image
-            -# %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-
-
+            -# %input#message_image.input-box__image__file{name:"message[image]",type:"file"}
+          %input.submit-btn{"data-disable-with":"Send",name:"commit", type:"submit",value: "Send"}/
