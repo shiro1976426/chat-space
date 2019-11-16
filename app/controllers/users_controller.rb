@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  def index
+  end
+
   def edit
   end
 
@@ -9,6 +12,9 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def create
   end
 
   private
