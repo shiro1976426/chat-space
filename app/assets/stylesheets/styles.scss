@@ -122,7 +122,7 @@
     }
 
     .messages{    
-    height: calc(100vh - 183px);
+    height: calc(100vh - 150px);
     padding: 46px 40px;
     background-color: #fafafa;
 
@@ -144,51 +144,92 @@
         }
     }
 
-    .form{
+    .form {
+      background-color: #DDDDDD;
+      box-sizing: border-box;
       height: 90px;
-      padding: 20px 40px;
-      background-color: #ddd;
-
-      .new_message{
-        // display: none;
-        display: flex;}
-
-      .input-box{
-        position: relative;
-        top:20px; left:10px;
-        width: 100%;
-      
-        &__text{
-          height: 50px;
-          width: 83%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;}
-
-        &__image{
-          font-size: 1rem;
-          position: absolute;
-          top: 15px;
-          right: 130px;
-          cursor: pointer;
-
-          &__file{
-            display:none;
-          }
-        }
-
-      .submit-btn{
-        width: 100px;
+      padding: 20px 50px 20px 40px;
+      &__message {
+        border: none;
+        float: left;
         height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
+        width: calc(100% - 150px);
+      }
+      &__mask {
+        background-color: white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      &__submit {
+        background-color:blue;
+        border: none;
         color: white;
-        cursor: pointer;
-        position: absolute;
-        top:0px; left:calc(100vw - 500px);}
-       
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
       }
     }
   }
+    //   .form{
+  //     height: 90px;
+  //     padding: 20px 40px;
+  //     background-color: #ddd;
+  //     // display: flex;
+  //     // flex-direction: row;
+
+  //     .form__messages{
+  //       height: 50px;
+  //       width: 300px;
+  //       display: none;
+  //       display: flex;}
+
+  //     .form__mask{
+  //       display: flex;
+  //       position: relative;
+  //       top:20px; left:10px;
+  //       width: 100%;
+      
+  //       .form__mask__image{
+  //         height: 50px;
+  //         width: 83%;
+  //         padding: 0 40px 0 10px;
+  //         color: #434a54;
+  //         border-style: none;}
+
+  //         .icon{
+  //         font-size: 1rem;
+  //         position: absolute;
+  //         top: 15px;
+  //         right: 130px;
+  //         cursor: pointer;
+
+  //         .hidden{
+  //           display:none;
+  //         }
+  //       }
+
+  //     .form_submit{
+  //       width: 100px;
+  //       height: 50px;
+  //       padding: 0 30px;
+  //       margin-left: 15px;
+  //       background-color: #38aef0;
+  //       color: white;
+  //       cursor: pointer;
+  //       position: absolute;
+  //       top:0px; left:calc(100vw - 500px);}
+       
+  //     }
+  //   }
+  // }
 }
