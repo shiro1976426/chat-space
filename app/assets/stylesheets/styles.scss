@@ -148,12 +148,16 @@
       background-color: #DDDDDD;
       box-sizing: border-box;
       height: 90px;
+      width:100%;
       padding: 20px 50px 20px 40px;
+      position: fixed;
+      top: 650px; left:295px;
+
       &__message {
         border: none;
         float: left;
         height: 50px;
-        width: calc(100% - 150px);
+        width: calc(100vw - 500px);
       }
       &__mask {
         background-color: white;
@@ -163,13 +167,14 @@
         &__image {
           font-size: 20px;
           line-height: 50px;
+          cursor:pointer;
         }
         .hidden {
           display: none;
         }
       }
       &__submit {
-        background-color:blue;
+        background-color:skyblue;
         border: none;
         color: white;
         float: right;
@@ -177,6 +182,9 @@
         height: 50px;
         margin-left: 15px;
         padding: 0 30px;
+        cursor:pointer;
+        position:fixed;
+        top: 670px;
       }
     }
   }
