@@ -17,7 +17,7 @@ $(function(){
         </div>
           ${image}
       </div>`
-    var image = message.image? <img src=${message.image}></img>:"";    
+    var image = message.image? <img src = ${message.image} ></img>:"";    
   }
 
   $('#new_message').on('submit', function(e){
