@@ -1,8 +1,10 @@
 .chat {
-  width: calc(100% - 300px);
+  height: calc(100% - 140px);
+
   .header {
     box-sizing: border-box;
-    height: 140px;
+    height: 100px;
+    background-color:#2f3e51;
     padding: 0 40px;
 
     .left-header {
@@ -25,14 +27,14 @@
     }
     .right-header {
       border: 1px solid $light_blue;
-      color: lightblue;
+      color: skyblue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
       &__button {
-        color: lightblue;
+        color: skyblue;
         text-decoration: none;
       }
     }
