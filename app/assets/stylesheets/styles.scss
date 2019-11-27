@@ -2,7 +2,7 @@
   display: flex;
   box-sizing: border-box;
 
-  .chat-side{
+  .side-bar{
     width: 300px;
     // height: 100vh;
     box-sizing: border-box;
@@ -61,10 +61,11 @@
     }
   
     .groups{
-      // height: calc(100vh - 140px);
+      // height: calc(100vh - 100px);
       box-sizing: border-box;
       background-color:#2f3e51;
       padding: 20px 20px 0;
+      height: calc(100vh - 100px);
         
       .group{
         margin-bottom: 40px;
@@ -204,3 +205,4 @@
   }
    
 }
+
